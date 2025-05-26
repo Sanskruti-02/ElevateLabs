@@ -1,0 +1,91 @@
+C:\Users\Admin>nmap -sS 192.168.1.0/24
+Starting Nmap 7.97 ( https://nmap.org ) at 2025-05-26 18:25 +0530
+Nmap scan report for 192.168.1.1
+Host is up (0.056s latency).
+Not shown: 997 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+53/tcp  open  domain
+80/tcp  open  http
+443/tcp open  https
+MAC Address: XX:XX:XX:XX:XX:XX
+
+Nmap scan report for 192.168.1.4
+Host is up (0.029s latency).
+All 1000 scanned ports on 192.168.1.4 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: XX:XX:XX:XX:XX:XX
+
+Nmap scan report for 192.168.1.8
+Host is up (0.036s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT     STATE SERVICE
+6668/tcp open  irc
+8000/tcp open  http-alt
+MAC Address: XX:XX:XX:XX:XX:XX
+
+Nmap scan report for 192.168.1.9
+Host is up (0.00095s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3306/tcp open  mysql
+7070/tcp open  realserver
+
+Nmap done: 256 IP addresses (4 hosts up) scanned in 100.99 seconds
+
+==> Hostwise open ports with their common services and potential risk at those ports
+
+Host: 192.168.1.1
+----------------------------
+Port    : 53
+Service : domain (DNS)
+Risk    : DNS misconfigurations can allow amplification or zone transfer attacks.
+
+Port    : 80
+Service : http (Web Server - Unencrypted)
+Risk    : Data can be intercepted or altered. Vulnerable to MITM attacks.
+
+Port    : 443
+Service : https (Secure Web Server)
+Risk    : Generally secure, but weak SSL/TLS settings can be exploited.
+
+------------------------------------------------------------
+
+
+Host: 192.168.1.8
+----------------------------
+Port    : 6668
+Service : irc (Internet Relay Chat)
+Risk    : Frequently used by botnets for command-and-control (C2). Should be disabled if not in use.
+
+Port    : 8000
+Service : http-alt (Alternate Web Service)
+Risk    : May expose test/dev services or admin panels. Check for authentication and access controls.
+
+------------------------------------------------------------
+
+Host: 192.168.1.9
+----------------------------
+Port    : 135
+Service : msrpc (Microsoft RPC)
+Risk    : Vulnerable to Windows-specific attacks like DCOM exploits.
+
+Port    : 139
+Service : netbios-ssn (NetBIOS Session Service)
+Risk    : Legacy service; often exploited for enumeration and data leakage.
+
+Port    : 445
+Service : microsoft-ds (SMB over TCP)
+Risk    : High-value target in malware like EternalBlue, WannaCry. Should be 	  firewalled on public networks.
+
+Port    : 3306
+Service : mysql (MySQL Database)
+Risk    : Data breach risk if remotely accessible without strong authentication.
+
+Port    : 7070
+Service : realserver (RealAudio Streaming)
+Risk    : Obsolete protocol; likely unpatched or insecure. Disable if not actively 	used.
+
+C:\Users\Admin>
