@@ -8,8 +8,7 @@ Obtained a sample phishing email from Caniphish Simulation for educational purpo
 ##  Method of Analysis
 
 To evaluate the legitimacy of the email, the following steps were followed:
-
-1. **Examine Sender�s Email Address:**
+1. **Examine Sender’s Email Address:**
    - The sender address was reviewed for signs of spoofing or impersonation.
 
 2. **Check for Suspicious Links or Attachments:**
