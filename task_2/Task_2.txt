@@ -1,0 +1,38 @@
+Task 2
+
+Phishing Email Analysis
+================================================================================================================
+
+1. Sender Email Address
+* Email: desktop-support@securesupportcloud[.]com
+* Analysis: The domain securesupportcloud[.]com does not belong to Contoso Corp. This is a clear sign of email spoofing or the use of a fake external domain pretending to be a trusted source.
+
+2. Suspicious Link
+* Link Text: Update Now
+* Hover Behavior: Since it's a simulated email, the actual link would likely redirect to a training site or a malicious placeholder in a real phishing case.
+
+3. Urgent or Threatening Language in the Email Body
+"Failure to do so will result in being locked out of your system starting tomorrow morning..."
+
+4. Request for Company Credentials
+      "Use your company credentials to verify your identity."
+* Analysis: Legitimate IT departments never ask employees to enter credentials through email links, especially to unknown domains. This is a credential harvesting attempt.
+
+5. Generic Greeting and Branding
+* Greeting: "Dear all Contoso Corp employees"
+* Analysis: Phishing emails often use generic greetings and vague references to organizations.
+
+6. Absence of Personalization
+* The email does not address the recipient by name or include any specific department or internal identifiers.
+* Analysis: Real corporate emails are typically personalized.
+-----------------------------------------------------------------------------------------------------------
+
+----> Summary of Phishing traits found in email :
+1.  Spoofed/Fake Email Address --->Yes, Uses external domain not linked to Contoso
+2.  Suspicious Link--->Yes, “Update Now” likely leads to a phishing page
+3.  Urgent Language--->Yes, Mentions account lockout if not acted on today
+4.  Request for Credentials--->Yes, Asks users to input company login details
+5.  Generic Greeting--->Yes, No personal name, only company-wide reference
+6.  No Personalization--->Yes, No recipient name or context-specific info
+7.  Spelling/Grammar Errors--->No, Language appears grammatically correct
+8.  Generic/Fictional Company Name--->Yes, “Contoso Corp” is not a real business
